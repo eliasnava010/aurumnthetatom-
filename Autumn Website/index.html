@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autumn Truths - Home</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-christmas min-h-screen text-slate-100 flex flex-col justify-between selection:bg-amber-500 selection:text-white">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-slate-900/70 border-b border-white/10 px-4 lg:px-8 py-3.5 shadow-lg">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <!-- Brand Title -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-2xl">🎄🍟</span>
+                <span class="font-heading text-lg md:text-xl font-bold bg-gradient-to-r from-amber-300 via-orange-400 to-red-400 bg-clip-text text-transparent group-hover:opacity-90 transition">
+                    Autumn Truths
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="index.html" class="px-5 py-2 rounded-full font-medium text-sm transition text-amber-300 bg-white/10 shadow-sm">
+                    <i class="fa-solid fa-house mr-2"></i> Home
+                </a>
+                <a href="about.html" class="px-5 py-2 rounded-full font-medium text-sm transition text-slate-300 hover:text-white hover:bg-white/10">
+                    <i class="fa-solid fa-circle-info mr-2"></i> About
+                </a>
+                <a href="contact.html" class="px-5 py-2 rounded-full font-medium text-sm transition text-slate-300 hover:text-white hover:bg-white/10">
+                    <i class="fa-solid fa-envelope mr-2"></i> Contact
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl bg-white/10 text-slate-200 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">
+            <a href="index.html" class="w-full text-left px-4 py-2.5 rounded-lg font-medium text-slate-200 hover:bg-white/10 flex items-center">
+                <i class="fa-solid fa-house mr-3 text-amber-400"></i> Home
+            </a>
+            <a href="about.html" class="w-full text-left px-4 py-2.5 rounded-lg font-medium text-slate-200 hover:bg-white/10 flex items-center">
+                <i class="fa-solid fa-circle-info mr-3 text-amber-400"></i> About
+            </a>
+            <a href="contact.html" class="w-full text-left px-4 py-2.5 rounded-lg font-medium text-slate-200 hover:bg-white/10 flex items-center">
+                <i class="fa-solid fa-envelope mr-3 text-amber-400"></i> Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow">
+        <section class="space-y-10">
+            
+            <!-- Hero Title -->
+            <div class="text-center space-y-4 max-w-3xl mx-auto pt-2">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 text-xs md:text-sm font-semibold tracking-wide uppercase">
+                    <i class="fa-solid fa-snowflake text-amber-300"></i> Autumn Special <i class="fa-solid fa-snowflake text-amber-300"></i>
+                </div>
+                <h1 class="font-heading text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+                    Welcome to Autumn <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-400">fat list of truths</span>
+                </h1>
+                <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto font-normal">
+                    Complete the checklist and view the photo gallery at the bottom and lastly click the button
+                </p>
+            </div>
+
+            <!-- PROMINENT FEATURE BOX -->
+            <div class="max-w-xl mx-auto glass-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border border-amber-500/40 shadow-2xl">
+                <div class="ambient-glow absolute -top-20 -left-20 w-48 h-48 bg-amber-500/30 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="ambient-glow absolute -bottom-20 -right-20 w-48 h-48 bg-red-500/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 space-y-6">
+                    <!-- CHANGE YOUR PHOTO FILENAME IN VS CODE HERE -->
+                    <div class="inline-block relative">
+                        <img src="YOUR_PHOTO_NAME.jpg" 
+                             alt="Crispy Taco Bell Nacho Fries" 
+                             class="w-56 h-40 sm:w-64 sm:h-48 object-cover rounded-2xl shadow-2xl border-2 border-amber-400/60 mx-auto transform hover:scale-105 transition duration-300"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/ea580c/ffffff?text=Add+Photo+In+VS+Code';" />
+                        <span class="absolute -top-3 -right-3 bg-gradient-to-r from-red-600 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-white/20 z-20">
+                            CRISPY & CHEESY Fatty🔥
+                        </span>
+                    </div>
+
+                    <div>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-bold text-amber-300 mb-1">Crispy Taco Bell Nacho Fries</h3>
+                        <p class="text-xs sm:text-sm text-slate-300">Click the button once you completed everything</p>
+                    </div>
+
+                    <button onclick="revealTruth()" class="btn-glow bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 hover:from-amber-500 hover:to-red-600 text-slate-950 font-heading font-extrabold text-xl px-10 py-4 rounded-full w-full sm:w-auto tracking-wide transition active:scale-95 flex items-center justify-center gap-3 mx-auto">
+                        <i class="fa-solid fa-sparkles text-slate-950"></i> CLICK ME <i class="fa-solid fa-sparkles text-slate-950"> </i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- FAT BUCKET LIST OF TRUTHS CHECKLIST -->
+            <div class="glass-card-dark rounded-3xl p-6 md:p-8 max-w-3xl mx-auto shadow-2xl">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                    <div>
+                        <h2 class="font-heading text-2xl md:text-3xl font-bold text-amber-400 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-red-400"></i> Autumn Npc dialogue
+                        </h2>
+                        <p class="text-xs md:text-sm text-slate-400">Mark off your saying you said today</p>
+                    </div>
+                    <span id="completion-counter" class="text-xs md:text-sm bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3.5 py-1.5 rounded-full font-bold">
+                        0/6 Done
+                    </span>
+                </div>
+
+                <div id="checklist-container" class="space-y-3"></div>
+            </div>
+
+            <!-- PHOTO GALLERY SECTION -->
+            <div class="glass-card-dark rounded-3xl p-6 md:p-8 max-w-4xl mx-auto shadow-2xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-white/10 gap-3">
+                    <div>
+                        <h2 class="font-heading text-2xl md:text-3xl font-bold text-amber-400 flex items-center gap-2">
+                            <i class="fa-solid fa-camera-retro text-amber-400"></i> Photo Gallery
+                        </h2>
+                        <p class="text-xs md:text-sm text-slate-400">little fucker down here</p>
+                    </div>
+                </div>
+
+                <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-amber-400/40 group bg-slate-800">
+                        <img src="IMG_7356.jpg" alt="Photo 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/f59e0b?text=Slot+1';" />
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-amber-400/40 group bg-slate-800">
+                        <img src="6D7B3904-7C78-4E04-85FE-6FBB98818195.JPG" alt="Photo 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/f59e0b?text=Slot+2';" />
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-amber-400/40 group bg-slate-800">
+                        <img src="ED7E2D4B-7C0B-4341-8588-31246188663D.JPG" alt="Photo 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/f59e0b?text=Slot+3';" />
+                    </div>
+                    <div class="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-amber-400/40 group bg-slate-800">
+                        <img src="D1B895F5-B843-4724-9FA4-7E8496C5EA46.JPG" alt="Photo 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/f59e0b?text=Slot+4';" />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- TRUTH REVEAL MODAL -->
+    <div id="truth-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-card-dark max-w-md w-full rounded-3xl p-6 sm:p-8 text-center space-y-6 border border-amber-500/40 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-16 h-16 bg-gradient-to-tr from-amber-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto shadow-lg text-2xl">
+                🍟
+            </div>
+            <div class="space-y-2">
+                <h3 class="font-heading text-xl font-bold text-amber-300">Elias truth idk</h3>
+                <!-- EDIT YOUR TEXT HERE DIRECTLY IN VS CODE -->
+                <p id="truth-text" class="text-base text-amber-200 italic font-medium">aurumn i think its best if i just stop talking to you i do like you a lot and i just dont know how to really show it and alos you seem happier with your ex anyways he shows his affection how you like it and does all that with you and im just getting in the way of it and messing it up on something you wanted for these past 3 years and again i dont want to get in the way of it and i dont want to be that person that just waiting in the corner waiting to get a turn lol idk aurumn but i wont be texting you or anything anymore but you can always txt me if you need help with something my phone isnt the busiest so yeah i really wished i couldve went out and done stuff with you like those light🧍 and exploring stuff like santa cruz or san fransico i know that sounds corny but idk that just how i feel i guess and i just want this to be simple and understandable for you but enjoy your time with gobin and love him i guess idk do what you want im sorry aurumn if this sounds all dorky and shit idk how to really say bye to someone i like idk im gonna go drink myslef till i blackout goodbye aurumn and im sorry again</p>
+            </div>
+            <button onclick="closeModal()" class="w-full py-3 bg-amber-400 hover:bg-amber-500 font-heading font-bold text-slate-950 rounded-xl transition">
+                Got It! 🎄
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full border-t border-white/10 bg-slate-900/80 backdrop-blur-md py-6 px-4 text-center text-xs text-slate-400">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© Autumn fat list</p>
+            <div class="flex items-center gap-4 text-slate-300">
+                <a href="index.html" class="hover:text-amber-400">Home</a>
+                <span>•</span>
+                <a href="about.html" class="hover:text-amber-400">About</a>
+                <span>•</span>
+                <a href="contact.html" class="hover:text-amber-400">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // EDIT YOUR TO-DO / BUCKET LIST ITEMS HERE IN VS CODE
+        const bucketListItems = [
+            { id: 1, text: "ELIAS", completed: false },
+            { id: 2, text: "STOP", completed: false },
+            { id: 3, text: "BITCH", completed: false },
+            { id: 4, text: "IM SCARED", completed: false },
+            { id: 5, text: "HELP", completed: false },
+            { id: 6, text: "I cant bresthe rn", completed: false }
+        ];
+
+        function renderChecklist() {
+            const container = document.getElementById('checklist-container');
+            container.innerHTML = '';
+            let completedCount = 0;
+
+            bucketListItems.forEach((item, index) => {
+                if (item.completed) completedCount++;
+
+                const div = document.createElement('div');
+                div.className = `flex items-center justify-between p-3.5 rounded-2xl transition border ${
+                    item.completed 
+                    ? 'bg-amber-500/10 border-amber-500/30 text-amber-200' 
+                    : 'bg-white/5 border-white/10 text-slate-200 hover:bg-white/10'
+                }`;
+                div.innerHTML = `
+                    <label class="flex items-center gap-3 cursor-pointer w-full select-none">
+                        <input type="checkbox" ${item.completed ? 'checked' : ''} onchange="toggleItem(${index})" 
+                               class="w-5 h-5 rounded border-slate-600 text-amber-500 focus:ring-amber-400 focus:ring-offset-slate-900 bg-slate-800">
+                        <span class="text-sm font-medium ${item.completed ? 'line-through text-slate-400' : ''}">${item.text}</span>
+                    </label>
+                    ${item.completed ? '<i class="fa-solid fa-check text-amber-400 text-sm"></i>' : ''}
+                `;
+                container.appendChild(div);
+            });
+
+            document.getElementById('completion-counter').innerText = `${completedCount}/${bucketListItems.length} Done`;
+        }
+
+        function toggleItem(index) {
+            bucketListItems[index].completed = !bucketListItems[index].completed;
+            renderChecklist();
+        }
+
+        function revealTruth() {
+            document.getElementById('truth-modal').classList.remove('hidden');
+
+            confetti({
+                particleCount: 90,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#f59e0b', '#ea580c', '#ef4444', '#ffffff']
+            });
+        }
+
+        function closeModal() {
+            document.getElementById('truth-modal').classList.add('hidden');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderChecklist();
+        });
+    </script>
+</body>
+</html>
